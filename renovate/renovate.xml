@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>renovate</Name>
+	<Repository>renovate/renovate:latest</Repository>
+	<Registry>https://hub.docker.com/r/renovate/renovate</Registry>
+	<Branch>
+		<Tag>latest</Tag>
+		<TagDescription>The default image only comes with the Node.js environment. Renovate will then install any needed tools when it runs. Read the binarySource=install documentation for more details. We recommend this default image for most users.</TagDescription>
+	</Branch>
+	<Branch>
+		<Tag>full</Tag>
+		<TagDescription>The -full image comes with most package managers that Renovate supports, but not all package managers. Update your Docker images regularly to keep the pre-installed tools up-to-date.&#xD;
+The full image is for users who don't want to download or install things at runtime. This image has some downsides, because it:&#xD;
+Comes pre-installed with one version of each language/manager - usually the latest
+Weighs several gigabytes</TagDescription>
+	</Branch>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://github.com/diogonr/unraid_templates/issues</Support>
+	<Project>https://github.com/renovatebot/renovate</Project>
+	<Overview>Automated dependency updates. Multi-platform and multi-language.&#xD;Create your renovate default config on the appdata dir, or on /username/renovate-config</Overview>
+	<Category>Tools:</Category>
+	<WebUI/>
+	<TemplateURL/>
+	<Icon>https://docs.renovatebot.com/assets/images/logo.pngv</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1713696247</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+	<Config Name="config" Target="/config/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/renovate</Config>
+	<Config Name="RENOVATE_CONFIG_FILE" Target="RENOVATE_CONFIG_FILE" Default="" Mode="" Description="Unecessary if you use have renovate-config repo setup" Type="Variable" Display="always" Required="false" Mask="false">/config/renovate.json5</Config>
+	<Config Name="RENOVATE_PLATFORM" Target="RENOVATE_PLATFORM" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">github</Config>
+	<Config Name="RENOVATE_TOKEN" Target="RENOVATE_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
