@@ -9,7 +9,7 @@ Use this at your own risk
 
 
 ### Cron jobs
-Create a [user script](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/) to run these container at certain intervals, here are my configs
+Create a [user script](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/) to run these containers at certain intervals, here are my configs
 
 ```sh
 #!/bin/bash
